@@ -1,0 +1,456 @@
+
+[     UTC     ] Logs for movie-recommender-ivp3lrkk9s7jeazctuymuh.streamlit.app/
+────────────────────────────────────────────────────────────────────────────────────────
+[09:38:53] 🚀 Starting up repository: 'movie-recommender', branch: 'main', main module: 'app.py'
+[09:38:53] 🐙 Cloning repository...
+[09:38:55] 🐙 Cloning into '/mount/src/movie-recommender'...
+
+[09:38:55] 🐙 Cloned repository!
+[09:38:55] 🐙 Pulling code changes from Github...
+[09:38:56] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.13.3 environment at /home/adminuser/venv
+Resolved 53 packages in 621ms
+  × Failed to download and build `scikit-surprise==1.1.4`
+  ╰─▶ Build backend failed to determine requirements with `build_wheel()`
+      (exit status: 1)
+
+      [stdout]
+      Compiling surprise/similarities.pyx because it changed.
+      Compiling surprise/prediction_algorithms/matrix_factorization.pyx
+      because it changed.
+      Compiling surprise/prediction_algorithms/optimize_baselines.pyx because
+      it changed.
+      Compiling surprise/prediction_algorithms/slope_one.pyx because it
+      changed.
+      Compiling surprise/prediction_algorithms/co_clustering.pyx because it
+      changed.
+      [1/5] Cythonizing surprise/prediction_algorithms/co_clustering.pyx
+
+      [stderr]
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              self.avg_cltr_i = avg_cltr_i
+              self.avg_cocltr = avg_cocltr
+
+              return self
+
+          def compute_averages(self, np.ndarray[np.int_t] cltr_u,
+                                                   ^
+      ------------------------------------------------------------
+
+      surprise/prediction_algorithms/co_clustering.pyx:157:45: Invalid type.
+      Traceback (most recent call last):
+        File "<string>", line 14, in <module>
+          requires = get_requires_for_build({})
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmptw4HAc/lib/python3.13/site-packages/setuptools/build_meta.py",
+      line 331, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=[])
+                 ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmptw4HAc/lib/python3.13/site-packages/setuptools/build_meta.py",
+      line 301, in _get_build_requires
+          self.run_setup()
+          ~~~~~~~~~~~~~~^^
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmptw4HAc/lib/python3.13/site-packages/setuptools/build_meta.py",
+      line 317, in run_setup
+          exec(code, locals())
+          ~~~~^^^^^^^^^^^^^^^^
+        File "<string>", line 116, in <module>
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmptw4HAc/lib/python3.13/site-packages/Cython/Build/Dependencies.py",
+      line 1145, in cythonize
+          cythonize_one(*args)
+          ~~~~~~~~~~~~~^^^^^^^
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmptw4HAc/lib/python3.13/site-packages/Cython/Build/Dependencies.py",
+      line 1289, in cythonize_one
+          raise CompileError(None, pyx_file)
+      Cython.Compiler.Errors.CompileError:
+      surprise/prediction_algorithms/co_clustering.pyx
+
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.13.3 environment at /home/adminuser/venv
+Resolved 4 packages in 136ms
+Prepared 4 packages in 147ms
+Installed 4 packages in 17ms
+ +[2025-05-30 09:39:01.776238]  markdown-it-py==3.0.0
+ + mdurl==0.1.2
+ + pygments==2.19.1
+ + rich==14.0.0
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Collecting streamlit (from -r /mount/src/movie-recommender/requirements.txt (line 1))
+  Downloading streamlit-1.45.1-py3-none-any.whl.metadata (8.9 kB)
+Collecting pandas (from -r /mount/src/movie-recommender/requirements.txt (line 2))
+  Downloading pandas-2.2.3-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.9/89.9 kB 4.7 MB/s eta 0:00:00[2025-05-30 09:39:03.110459] 
+Collecting numpy (from -r /mount/src/movie-recommender/requirements.txt (line 3))
+  Downloading numpy-2.2.6-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 112.3 MB/s eta 0:00:00[2025-05-30 09:39:03.480660] 
+Collecting scikit-learn (from -r /mount/src/movie-recommender/requirements.txt (line 4))
+  Downloading scikit_learn-1.6.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+Collecting nltk (from -r /mount/src/movie-recommender/requirements.txt (line 5))
+  Downloading nltk-3.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting matplotlib (from -r /mount/src/movie-recommender/requirements.txt (line 6))
+  Downloading matplotlib-3.10.3-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Collecting seaborn (from -r /mount/src/movie-recommender/requirements.txt (line 7))
+  Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting joblib (from -r /mount/src/movie-recommender/requirements.txt (line 8))
+  Downloading joblib-1.5.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting scikit-surprise (from -r /mount/src/movie-recommender/requirements.txt (line 9))
+  Downloading scikit_surprise-1.1.4.tar.gz (154 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 154.4/154.4 kB 20.7 MB/s eta 0:00:00[2025-05-30 09:39:04.179496] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [45 lines of output]
+      
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              self.avg_cltr_i = avg_cltr_i
+              self.avg_cocltr = avg_cocltr
+      
+              return self
+      
+          def compute_averages(self, np.ndarray[np.int_t] cltr_u,
+                                                   ^
+      ------------------------------------------------------------
+      
+      surprise/prediction_algorithms/co_clustering.pyx:157:45: Invalid type.
+      Compiling surprise/similarities.pyx because it changed.
+      Compiling surprise/prediction_algorithms/matrix_factorization.pyx because it changed.
+      Compiling surprise/prediction_algorithms/optimize_baselines.pyx because it changed.
+      Compiling surprise/prediction_algorithms/slope_one.pyx because it changed.
+      Compiling surprise/prediction_algorithms/co_clustering.pyx because it changed.
+      [1/5] Cythonizing surprise/prediction_algorithms/co_clustering.pyx
+      Traceback (most recent call last):
+        File "/home/adminuser/venv/lib/python3.13/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 353, in <module>
+          main()
+          ~~~~^^
+        File "/home/adminuser/venv/lib/python3.13/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 335, in main
+          json_out['return_val'] = hook(**hook_input['kwargs'])
+                                   ~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/home/adminuser/venv/lib/python3.13/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 118, in get_requires_for_build_wheel
+          return hook(config_settings)
+        File "/tmp/pip-build-env-f3lbhjh0/overlay/lib/python3.13/site-packages/setuptools/build_meta.py", line 331, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=[])
+                 ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/tmp/pip-build-env-f3lbhjh0/overlay/lib/python3.13/site-packages/setuptools/build_meta.py", line 301, in _get_build_requires
+          self.run_setup()
+          ~~~~~~~~~~~~~~^^
+        File "/tmp/pip-build-env-f3lbhjh0/overlay/lib/python3.13/site-packages/setuptools/build_meta.py", line 317, in run_setup
+          exec(code, locals())
+          ~~~~^^^^^^^^^^^^^^^^
+        File "<string>", line 116, in <module>
+        File "/tmp/pip-build-env-f3lbhjh0/overlay/lib/python3.13/site-packages/Cython/Build/Dependencies.py", line 1145, in cythonize
+          cythonize_one(*args)
+          ~~~~~~~~~~~~~^^^^^^^
+        File "/tmp/pip-build-env-f3lbhjh0/overlay/lib/python3.13/site-packages/Cython/Build/Dependencies.py", line 1289, in cythonize_one
+          raise CompileError(None, pyx_file)
+      Cython.Compiler.Errors.CompileError: surprise/prediction_algorithms/co_clustering.pyx
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× Getting requirements to build wheel did not run successfully.
+│ exit code: 1
+╰─> See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+
+[notice] A new release of pip is available: 24.0 -> 25.1.1
+[notice] To update, run: pip install --upgrade pip
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using standard pip install.
+Collecting rich>=10.14.0
+  Downloading rich-14.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=10.14.0)
+  Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich>=10.14.0)
+  Downloading pygments-2.19.1-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=10.14.0)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Downloading rich-14.0.0-py3-none-any.whl (243 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.2/243.2 kB 10.9 MB/s eta 0:00:00[2025-05-30 09:39:15.554432] 
+Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 158.6 MB/s eta 0:00:00[2025-05-30 09:39:15.568345] 
+Downloading pygments-2.19.1-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 67.3 MB/s eta 0:00:00[2025-05-30 09:39:15.600171] 
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: pygments, mdurl, markdown-it-py, rich
+  Attempting uninstall: pygments
+    Found existing installation: Pygments 2.19.1
+    Uninstalling Pygments-2.19.1:
+      Successfully uninstalled Pygments-2.19.1
+  Attempting uninstall: mdurl
+    Found existing installation: mdurl 0.1.2
+    Uninstalling mdurl-0.1.2:
+      Successfully uninstalled mdurl-0.1.2
+  Attempting uninstall: markdown-it-py
+    Found existing installation: markdown-it-py 3.0.0
+    Uninstalling markdown-it-py-3.0.0:
+      Successfully uninstalled markdown-it-py-3.0.0
+  Attempting uninstall: rich
+    Found existing installation: rich 14.0.0
+    Uninstalling rich-14.0.0:
+      Successfully uninstalled rich-14.0.0
+Successfully installed markdown-it-py-3.0.0 mdurl-0.1.2 pygments-2.19.1 rich-14.0.0
+
+[notice] A new release of pip is available: 24.0 -> 25.1.1
+[notice] To update, run: pip install --upgrade pip
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[09:39:18] ❗️ installer returned a non-zero exit code
+[09:39:18] ❗️ Error during processing dependencies! Please fix the error and push an update, or try restarting the app.
+[09:40:52] 🖥 Provisioning machine...
+[09:40:59] 🎛 Preparing system...
+[09:40:56] 🚀 Starting up repository: 'movie-recommender', branch: 'main', main module: 'app.py'
+[09:40:56] 🐙 Cloning repository...
+[09:40:58] 🐙 Cloning into '/mount/src/movie-recommender'...
+
+[09:40:58] 🐙 Cloned repository!
+[09:40:58] 🐙 Pulling code changes from Github...
+[09:40:59] 📦 Processing dependencies...
+[09:41:00] ⛓ Spinning up manager process...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.13.3 environment at /home/adminuser/venv
+Resolved 53 packages in 661ms
+  × Failed to download and build `scikit-surprise==1.1.4`[2025-05-30 09:41:06.364421] 
+  ╰─▶ Build backend failed to determine requirements with `[2025-05-30 09:41:06.365182] build_wheel()[2025-05-30 09:41:06.365460] `
+      (exit status: 1)
+
+      [2025-05-30 09:41:06.365742] [stdout][2025-05-30 09:41:06.366007] 
+      Compiling surprise/similarities.pyx because it changed.
+      Compiling surprise/prediction_algorithms/matrix_factorization.pyx
+      because it changed.
+      Compiling surprise/prediction_algorithms/optimize_baselines.pyx because
+      it changed.
+      Compiling surprise/prediction_algorithms/slope_one.pyx because it
+      changed.
+      Compiling surprise/prediction_algorithms/co_clustering.pyx because it
+      changed.
+      [1/5] Cythonizing surprise/prediction_algorithms/co_clustering.pyx
+
+      [2025-05-30 09:41:06.366260] [stderr][2025-05-30 09:41:06.366493] 
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              self.avg_cltr_i = avg_cltr_i
+              self.avg_cocltr = avg_cocltr
+
+              return self
+
+          def compute_averages(self, np.ndarray[np.int_t] cltr_u,
+                                                   ^
+      ------------------------------------------------------------
+
+      surprise/prediction_algorithms/co_clustering.pyx:157:45: Invalid type.
+      Traceback (most recent call last):
+        File "<string>", line 14, in <module>
+          requires = get_requires_for_build({})
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmp3G2YRZ/lib/python3.13/site-packages/setuptools/build_meta.py",
+      line 331, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=[])
+                 ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmp3G2YRZ/lib/python3.13/site-packages/setuptools/build_meta.py",
+      line 301, in _get_build_requires
+          self.run_setup()
+          ~~~~~~~~~~~~~~^^
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmp3G2YRZ/lib/python3.13/site-packages/setuptools/build_meta.py",
+      line 317, in run_setup
+          exec(code, locals())
+          ~~~~^^^^^^^^^^^^^^^^
+        File "<string>", line 116, in <module>
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmp3G2YRZ/lib/python3.13/site-packages/Cython/Build/Dependencies.py",
+      line 1145, in cythonize
+          cythonize_one(*args)
+          ~~~~~~~~~~~~~^^^^^^^
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmp3G2YRZ/lib/python3.13/site-packages/Cython/Build/Dependencies.py",
+      line 1289, in cythonize_one
+          raise CompileError(None, pyx_file)
+      Cython.Compiler.Errors.CompileError:
+      surprise/prediction_algorithms/co_clustering.pyx
+
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.13.3 environment at /home/adminuser/venv
+Resolved [2025-05-30 09:41:06.609893] 4 packages[2025-05-30 09:41:06.610260]  [2025-05-30 09:41:06.610594] in 169ms[2025-05-30 09:41:06.610940] 
+Prepared 4 packages in 149ms
+Installed 4 packages in 17ms
+ + markdown-it-py==3.0.0
+ + mdurl==[2025-05-30 09:41:06.779337] 0.1.2
+ + pygments==2.19.1
+ + rich==14.0.0
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Collecting streamlit (from -r /mount/src/movie-recommender/requirements.txt (line 1))
+  Downloading streamlit-1.45.1-py3-none-any.whl.metadata (8.9 kB)
+Collecting pandas (from -r /mount/src/movie-recommender/requirements.txt (line 2))
+  Downloading pandas-2.2.3-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.9/89.9 kB 3.8 MB/s eta 0:00:00
+Collecting numpy (from -r /mount/src/movie-recommender/requirements.txt (line 3))
+  Downloading numpy-2.2.6-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 54.4 MB/s eta 0:00:00[2025-05-30 09:41:09.102342] 
+Collecting scikit-learn (from -r /mount/src/movie-recommender/requirements.txt (line 4))
+  Downloading scikit_learn-1.6.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+Collecting nltk (from -r /mount/src/movie-recommender/requirements.txt (line 5))
+  Downloading nltk-3.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting matplotlib (from -r /mount/src/movie-recommender/requirements.txt (line 6))
+  Downloading matplotlib-3.10.3-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Collecting seaborn (from -r /mount/src/movie-recommender/requirements.txt (line 7))
+  Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting joblib (from -r /mount/src/movie-recommender/requirements.txt (line 8))
+  Downloading joblib-1.5.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting scikit-surprise (from -r /mount/src/movie-recommender/requirements.txt (line 9))
+  Downloading scikit_surprise-1.1.4.tar.gz (154 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 154.4/154.4 kB 28.0 MB/s eta 0:00:00[2025-05-30 09:41:09.645511] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [45 lines of output]
+      
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              self.avg_cltr_i = avg_cltr_i
+              self.avg_cocltr = avg_cocltr
+      
+              return self
+      
+          def compute_averages(self, np.ndarray[np.int_t] cltr_u,
+                                                   ^
+      ------------------------------------------------------------
+      
+      surprise/prediction_algorithms/co_clustering.pyx:157:45: Invalid type.
+      Compiling surprise/similarities.pyx because it changed.
+      Compiling surprise/prediction_algorithms/matrix_factorization.pyx because it changed.
+      Compiling surprise/prediction_algorithms/optimize_baselines.pyx because it changed.
+      Compiling surprise/prediction_algorithms/slope_one.pyx because it changed.
+      Compiling surprise/prediction_algorithms/co_clustering.pyx because it changed.
+      [1/5] Cythonizing surprise/prediction_algorithms/co_clustering.pyx
+      Traceback (most recent call last):
+        File "/home/adminuser/venv/lib/python3.13/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 353, in <module>
+          main()
+          ~~~~^^
+        File "/home/adminuser/venv/lib/python3.13/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 335, in main
+          json_out['return_val'] = hook(**hook_input['kwargs'])
+                                   ~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/home/adminuser/venv/lib/python3.13/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 118, in get_requires_for_build_wheel
+          return hook(config_settings)
+        File "/tmp/pip-build-env-t94cazm0/overlay/lib/python3.13/site-packages/setuptools/build_meta.py", line 331, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=[])
+                 ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/tmp/pip-build-env-t94cazm0/overlay/lib/python3.13/site-packages/setuptools/build_meta.py", line 301, in _get_build_requires
+          self.run_setup()
+          ~~~~~~~~~~~~~~^^
+        File "/tmp/pip-build-env-t94cazm0/overlay/lib/python3.13/site-packages/setuptools/build_meta.py", line 317, in run_setup
+          exec(code, locals())
+          ~~~~^^^^^^^^^^^^^^^^
+        File "<string>", line 116, in <module>
+        File "/tmp/pip-build-env-t94cazm0/overlay/lib/python3.13/site-packages/Cython/Build/Dependencies.py", line 1145, in cythonize
+          cythonize_one(*args)
+          ~~~~~~~~~~~~~^^^^^^^
+        File "/tmp/pip-build-env-t94cazm0/overlay/lib/python3.13/site-packages/Cython/Build/Dependencies.py", line 1289, in cythonize_one
+          raise CompileError(None, pyx_file)
+      Cython.Compiler.Errors.CompileError: surprise/prediction_algorithms/co_clustering.pyx
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× Getting requirements to build wheel did not run successfully.
+│ exit code: 1
+╰─> See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+
+[notice] A new release of pip is available: 24.0 -> 25.1.1
+[notice] To update, run: pip install --upgrade pip
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using standard pip install.
+Collecting rich>=10.14.0
+  Downloading rich-14.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=10.14.0)
+  Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich>=10.14.0)
+  Downloading pygments-2.19.1-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=10.14.0)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Downloading rich-14.0.0-py3-none-any.whl (243 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.2/243.2 kB 12.7 MB/s eta 0:00:00[2025-05-30 09:41:21.502392] 
+Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 121.7 MB/s eta 0:00:00
+Downloading pygments-2.19.1-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 69.3 MB/s eta 0:00:00[2025-05-30 09:41:21.550207] 
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: pygments, mdurl, markdown-it-py, rich
+  Attempting uninstall: pygments
+    Found existing installation: Pygments 2.19.1
+    Uninstalling Pygments-2.19.1:
+      Successfully uninstalled Pygments-2.19.1
+  Attempting uninstall: mdurl
+    Found existing installation: mdurl 0.1.2
+    Uninstalling mdurl-0.1.2:
+      Successfully uninstalled mdurl-0.1.2
+  Attempting uninstall: markdown-it-py
+    Found existing installation: markdown-it-py 3.0.0
+    Uninstalling markdown-it-py-3.0.0:
+      Successfully uninstalled markdown-it-py-3.0.0
+  Attempting uninstall: rich
+    Found existing installation: rich 14.0.0
+    Uninstalling rich-14.0.0:
+      Successfully uninstalled rich-14.0.0
+Successfully installed markdown-it-py-3.0.0 mdurl-0.1.2 pygments-2.19.1 rich-14.0.0
+
+[notice] A new release of pip is available: 24.0 -> 25.1.1
+[notice] To update, run: pip install --upgrade pip
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[09:41:23] ❗️ installer returned a non-zero exit code
+[09:41:23] ❗️ Error during processing dependencies! Please fix the error and push an update, or try restarting the app.
